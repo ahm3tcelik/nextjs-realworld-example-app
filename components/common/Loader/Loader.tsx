@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import { useEffect } from "react";
+import { If } from "../../conditional";
 import useLoader from "./useLoader";
 import useLoaderStyles from "./useLoaderStyles";
 
@@ -22,14 +23,14 @@ const Loader = () => {
     })
     return (
         <>
-            {loaderState.isLoading &&
+            <If condition={loaderState.isLoading}>
                 <div className={classes.root}>
                     <div className={classes.spinner}>
                         <div className={classes.bounce1}></div>
                         <div className={classes.bounce2}></div>
                     </div>
                 </div>
-            }
+            </If>
         </>
     );
 }
