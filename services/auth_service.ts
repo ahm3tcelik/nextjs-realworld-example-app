@@ -1,10 +1,10 @@
 import { AxiosError } from "axios";
-import { httpClient, Endpoints } from "../../http_client";
-import Failure from '../../models/failure';
-import { IAuthStorage } from "../../storages/auth/IAuthStorage";
-import { IAuthAccessDTO } from "../../types/storages/auth";
-import { Left, Right, Either } from '../../models/either';
-import { IFailResponse, ILoginRequest, ILoginResponse, IRegisterRequest, IRegisterResponse } from '../../types/http';
+import { httpClient, Endpoints } from "../http_client";
+import Failure from '../models/failure';
+import { IAuthStorage } from "../storages/auth/IAuthStorage";
+import { IAuthAccessDTO } from "../types/storages/auth";
+import { Left, Right, Either } from '../models/either';
+import { IFailResponse, ILoginRequest, ILoginResponse, IRegisterRequest, IRegisterResponse } from '../types/http';
 
 export default class AuthService {
     private static instance: AuthService;

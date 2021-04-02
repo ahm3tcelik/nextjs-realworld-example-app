@@ -1,8 +1,11 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { AppProps } from "next/dist/next-server/lib/router/router";
 import { CssBaseline } from '@material-ui/core';
 import { ThemeProvider } from '@material-ui/styles';
 import theme from "../../init/theme";
+import { AuthProvider } from "../../contexts/auth/context";
+import Meta from "../../components/common/Meta";
+import HeadTag from "../../components/common/HeadTag";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
 
@@ -17,9 +20,14 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 
     return (
         <>
+            <HeadTag>
+                <Meta />
+            </HeadTag>
             <ThemeProvider theme={theme}>
                 <CssBaseline />
-                <Component {...pageProps} />
+                <AuthProvider>
+                    <Component {...pageProps} />
+                </AuthProvider>
             </ThemeProvider>
         </>
     );
