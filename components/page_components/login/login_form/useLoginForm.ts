@@ -23,7 +23,7 @@ const login = async (data: ILoginForm, authContext: IAuthContext, router: NextRo
         (_) => { // success
             result = undefined;
             authContext.actions.login({ email: data.email });
-            // router.push('/app')
+            router.push('/app')
         }
     )
     return result;

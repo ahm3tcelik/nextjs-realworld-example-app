@@ -135,7 +135,7 @@ export const LoginForm = () => {
                     <Grid container alignItems="stretch"
                         direction="column" justify="space-evenly">
                         <Typography variant="h5">Welcome!</Typography>
-                        <Typography color="textSecondary" variant="body2">Create Components / UI Library from design.</Typography>
+                        <Typography color="textSecondary" variant="body2">Next.js Realworld Example App / Login</Typography>
                         <Divider variant="fullWidth" className={classes.divider} />
 
                         <FieldSeperator />

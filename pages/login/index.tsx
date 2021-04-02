@@ -1,29 +1,15 @@
 import React from "react";
 import Link from 'next/link';
 import Image from 'next/image';
-import { Container, createStyles, makeStyles, Theme } from "@material-ui/core";
+import { Container } from "@material-ui/core";
 import HeadTag from "../../components/common/HeadTag";
 import EmptyLayout from "../../components/layouts/EmptyLayout";
 import { LoginForm } from '../../components/page_components/login';
-
-const useStyles = makeStyles((_: Theme) =>
-    createStyles({
-        container: {
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            minHeight: '100vh',
-        },
-        logo: {
-            position: 'absolute',
-            left: 10,
-            top: 10
-        }
-    }),
-);
+import { withoutUser } from "../../components/hocs/withoutUser";
+import useLoginPageStyles from "./useLoginPageStyles";
 
 const Logo = () => {
-    const classes = useStyles();
+    const classes = useLoginPageStyles();
     return (
         <div className={classes.logo}>
             <Link href="/">
@@ -42,7 +28,7 @@ const Logo = () => {
 }
 
 const LoginPage = () => {
-    const classes = useStyles();
+    const classes = useLoginPageStyles();
 
     return (
         <EmptyLayout>
@@ -55,4 +41,4 @@ const LoginPage = () => {
     );
 }
 
-export default LoginPage;
+export default withoutUser(LoginPage);
