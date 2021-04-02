@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { ISignupForm } from '../../../../types/forms';
 import { IAuthContext } from "../../../../types/contexts";
-import AuthService  from '../../../../services/auth_service';
+import AuthService  from '../../../../services/auth/auth_service';
 import { AuthLocalStorage } from "../../../../storages/auth";
 
 type ISignupState = {

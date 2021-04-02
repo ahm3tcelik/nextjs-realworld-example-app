@@ -1,5 +1,5 @@
 import router from 'next/router';
-import AuthService from '../../../services/auth_service';
+import AuthService from '../../../services/auth/auth_service';
 import { AuthLocalStorage } from '../../../storages/auth';
 import { IAuthContext } from '../../../types/contexts';
 

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { NextRouter } from 'next/router';
 import { AuthLocalStorage } from '../../../../storages/auth';
-import AuthService from '../../../../services/auth_service';
+import AuthService from '../../../../services/auth/auth_service';
 import { IAuthContext } from '../../../../types/contexts';
 import { ILoginForm } from '../../../../types/forms';
 
