@@ -1,4 +1,4 @@
-import { IAuthAccessDTO } from "../../types/";
+import { IAuthAccessDTO } from "../../types/storages";
 
 export interface IAuthStorage {
     setAccessDTO(data: IAuthAccessDTO): void;
