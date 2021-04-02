@@ -4,7 +4,7 @@ import HeadTag from '../../components/common/HeadTag';
 import { withUser } from '../../components/hocs/withUser';
 import InAppLayout from '../../components/layouts/InAppLayout';
 
-const IndexPage = () => {
+const AppIndexPage = () => {
 
     return (
         <InAppLayout>
@@ -16,4 +16,4 @@ const IndexPage = () => {
     );
 }
 
-export default withUser(IndexPage);
+export default withUser(AppIndexPage);
