@@ -34,14 +34,14 @@ const EmailField = (props: IDefaultField<ILoginForm>) => {
     return (
         <Controller
             name="email"
-            render={(props) => <TextField {...props.field}
+            render={({fieldState, field}) => <TextField {...field}
                 id="email"
                 placeholder="Email"
                 variant="outlined"
                 size="small"
                 color="secondary"
-                helperText={props.fieldState.error ? props.fieldState.error.message : null}
-                error={props.fieldState.error != null}
+                helperText={fieldState.error ? fieldState.error.message : null}
+                error={fieldState.error != null}
             />}
             control={props.controller}
             defaultValue=""
@@ -76,14 +76,14 @@ const PasswordField = (props: IDefaultField<ILoginForm>) => {
     return (
         <Controller
             name="password"
-            render={(props) =>
-                <FormControl {...props.field} variant="outlined" size="small">
+            render={({ fieldState, field }) =>
+                <FormControl {...field} variant="outlined" size="small">
                     <OutlinedInput
                         id="password"
                         color="secondary"
                         placeholder="Password"
                         type={state.isVisible ? 'text' : 'password'}
-                        error={props.fieldState.error != null}
+                        error={fieldState.error != null}
                         endAdornment={
                             <InputAdornment position="end">
                                 <IconButton
@@ -96,7 +96,9 @@ const PasswordField = (props: IDefaultField<ILoginForm>) => {
                             </InputAdornment>
                         }
                     />
-                    <FormHelperText className={classes.helperText}>{props.fieldState.error ? props.fieldState.error.message : null}</FormHelperText>
+                    <FormHelperText className={classes.helperText}>
+                        {fieldState.error ? fieldState.error.message : null}
+                    </FormHelperText>
                 </FormControl>
             }
             control={props.controller}

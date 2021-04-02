@@ -74,7 +74,7 @@ const UnAuthorizedItem = () => {
                 </Link>
             </Grid>
             <Grid item>
-                <Link href="/login">
+                <Link href="/signup">
                     <Button style={{ textTransform: 'capitalize' }} variant="contained" color="secondary" vocab="false">
                         Sign Up For Free
                     </Button>

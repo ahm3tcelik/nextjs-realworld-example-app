@@ -1,4 +1,4 @@
-import { Control } from "react-hook-form";
+import { Control, UseFormGetValues } from "react-hook-form";
 
 export type IDefaultInput = {
     handleChange: (e: React.ChangeEventHandler<HTMLInputElement>) => void;
@@ -6,5 +6,6 @@ export type IDefaultInput = {
 };
 
 export type IDefaultField<T> = {
-    controller: Control<T>
+    controller: Control<T>;
+    allValues?: UseFormGetValues<T>;
 }
